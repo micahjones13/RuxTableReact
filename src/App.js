@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import "@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.css";
+import {
+  RuxTable,
+  RuxTableHeader,
+  RuxTableCell,
+  RuxTableBody,
+  RuxTableHeaderCell,
+  RuxTableHeaderRow,
+  RuxTableRow,
+} from "@astrouxds/react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RuxTable data-testid="table">
+        <RuxTableHeader>
+          <RuxTableHeaderRow>
+            <RuxTableHeaderCell>Header</RuxTableHeaderCell>
+            <RuxTableHeaderCell>Header 2</RuxTableHeaderCell>
+          </RuxTableHeaderRow>
+        </RuxTableHeader>
+        <RuxTableBody>
+          <RuxTableRow>
+            <RuxTableCell>Cell 1</RuxTableCell>
+            <RuxTableCell>Cell 2</RuxTableCell>
+          </RuxTableRow>
+          <RuxTableRow>
+            <RuxTableCell>Cell 1</RuxTableCell>
+            <RuxTableCell>Cell 2</RuxTableCell>
+          </RuxTableRow>
+          <RuxTableRow>
+            <RuxTableCell>Cell 1</RuxTableCell>
+            <RuxTableCell>Cell 2</RuxTableCell>
+          </RuxTableRow>
+          <RuxTableRow>
+            <RuxTableCell>Cell 1</RuxTableCell>
+            <RuxTableCell>Cell 2</RuxTableCell>
+          </RuxTableRow>
+        </RuxTableBody>
+      </RuxTable>
     </div>
   );
 }
